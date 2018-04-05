@@ -91,7 +91,8 @@ public final class InventoryListener implements Listener {
         if (!event.getWhoClicked().hasPermission("inventorylimiter.limit")) {
             return;
         }
-        if (event.getCurrentItem().equals(filteredItem)) {
+        ItemStack item = event.getCurrentItem();
+        if (item != null && item.equals(filteredItem)) {
             event.setCancelled(true);
             ((Player) event.getWhoClicked()).updateInventory();
         }
