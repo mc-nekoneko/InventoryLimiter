@@ -1,0 +1,11 @@
+name: InventoryLimiter
+version: ${project.version}
+main: net.nekonekoserver.net.inventorylimiter.InventoryLimiter
+commands:
+  ilimit:
+    permission: inventorylimiter.command
+permissions:
+  inventorylimiter.command:
+    default: op
+  inventorylimiter.limit:
+    default: notop
